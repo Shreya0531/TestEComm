@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.8.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.16.1'
+    //implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
+
+
+
+}
+
+test {
+    useTestNG()
+}
